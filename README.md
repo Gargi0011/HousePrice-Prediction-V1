@@ -84,3 +84,29 @@ MoSold: Month Sold
 YrSold: Year Sold
 SaleType: Type of sale
 SaleCondition: Condition of sale
+
+
+# 🏡 House Price Prediction API
+
+This project is a **Machine Learning-powered API** for predicting house prices based on various input features. It uses a trained regression model and serves predictions via a FastAPI application.
+
+## 🚀 Features
+
+- Predicts house prices using features like size, quality, location, etc.
+- Built with **FastAPI** for high performance and easy documentation (Swagger UI).
+- Input validation with **Pydantic**.
+- Easily extendable and deployable.
+
+## 🔧 Tech Stack
+
+- **Backend**: Python, FastAPI
+- **Machine Learning**: scikit-learn (or any model you’ve trained)
+- **Data Handling**: pandas, numpy
+- **Serving**: Uvicorn
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/house-price-api.git
+cd house-price-api
+pip install -r requirements.txt
