@@ -37,9 +37,9 @@ jobs:
     - name: Deploy to EC2
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.EC2_HOST }}
+        host: ${{ secrets.EC2_HOST}}
         username: ubuntu
-        key: ${{ secrets.EC2_KEY }}
+        key: ${{ secrets.EC2_KEY}}
         script: |
           # Clone or update your specific repo
           cd HousePrice-Prediction-V1 || git clone https://github.com/sgajbhiye96/HousePrice-Prediction-V1.git && cd HousePrice-Prediction-V1
