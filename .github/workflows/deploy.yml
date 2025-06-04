@@ -41,12 +41,13 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_KEY }}
         script: |
-          # If repo already exists, pull latest code; otherwise, clone it
-          cd iris-api || git clone https://github.com/<your-username>/iris-api.git && cd iris-api
+          # Clone or update your specific repo
+          cd HousePrice-Prediction-V1 || git clone https://github.com/sgajbhiye96/HousePrice-Prediction-V1.git && cd HousePrice-Prediction-V1
           git pull origin main
 
           # Build and restart Docker container
-          docker build -t iris-api .
-          docker stop iris-api || true
-          docker rm iris-api || true
-          docker run -d -p 8000:8000 --name iris-api iris-api
+          docker build -t houseprediction .
+          docker stop houseprediction || true
+          docker rm houseprediction || true
+          docker run -d -p 8000:8000 --name houseprediction houseprediction
+
